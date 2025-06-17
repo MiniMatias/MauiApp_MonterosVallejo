@@ -20,8 +20,8 @@ namespace MauiApp_MonterosVallejo.Repositories
         public async Task<WeatherData> GetWeatherDataAsync(double latitude, double longitude)
         {
             HttpClient httpClient = new HttpClient();
-            string Latitude_F = latitude.ToString Replace(",", ".");
-            string Longitude_F = longitude.ToString Replace(",", ".");
+            string Latitude_F = latitude.ToString().Replace(",", ".");
+            string Longitude_F = longitude.ToString().Replace(",", ".");
 
             string url = $"https://api.open-meteo.com/v1/forecast?latitude="+ Latitude_F + "&longitude=" + Longitude_F + "&current_weather=true&timezone=America%2FLima";
 
